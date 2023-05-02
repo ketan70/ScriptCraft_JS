@@ -1,12 +1,12 @@
 // 1. Ways to print in JavaScript
-// console.log("Hello World");
-// alert("me");
-// document.write("this is document write")
+console.log("Hello World");
+alert("me");
+document.write("this is document write")
 
 // 2. Javascript console API
-// console.log("Hello World", 4 + 6, "Another log");
-// console.warn("this is warning");
-// console.error("This is an error");
+console.log("Hello World", 4 + 6, "Another log");
+console.warn("this is warning");
+console.error("This is an error");
 
 // 3. JavaScript Variables
 // What are Variables? - Containers to store data values
@@ -17,11 +17,21 @@ line
 commment
 */
 
+
+
 var number1 = 34;
 var number2 = 56;
-// console.log(number1 + number2);
+console.log(number1 + number2);
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // 4. Data types in JavaScript
+
+// At a very high level, there are two types of data types in JavaScript
+// 1. Primitive data types: undefined, null, number, string, boolean, symbol
+
 // Numbers
 var num1 = 455;
 var num2 = 56.76;
@@ -29,14 +39,6 @@ var num2 = 56.76;
 // String
 var str1 = "This is a string";
 var str2 = 'This is also a string';
-
-// Objects
-var marks = {
-    ravi: 34,
-    shubham: 78,
-    harry: 99.977
-}
-// console.log(marks);
 
 // Booleans
 var a = true;
@@ -47,60 +49,82 @@ var b = false;
 var und;
 // console.log(und);
 
+// null
 var n = null;
 // console.log(n);
-/*
-At a very high level, there are two types of data types in JavaScript
-1. Primitive data types: undefined, null, number, string, boolean, symbol
-2. Reference data types: Arrays and Objects
-*/
 
+
+//-------------------------------------------------------------//
+
+
+// 2. Reference data types: Arrays and Objects
+
+// Objects
+var marks = {
+    ravi: 34,
+    shubham: 78,
+    harry: 99.977
+}
+// console.log(marks);
+
+
+// Arrays
 var arr = [1, 2, "bablu", 4, 5]
 // console.log(arr)
 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // Operators in JavaScript
+
 // Arithmetic Operators
 var a = 100;
 var b = 10;
-// console.log("The value of a + b is ", a+b);
-// console.log("The value of a - b is ", a-b);
-// console.log("The value of a * b is ", a*b);
-// console.log("The value of a / b is ", a/b);
+console.log("The value of a + b is ", a+b);
+console.log("The value of a - b is ", a-b);
+console.log("The value of a * b is ", a*b);
+console.log("The value of a / b is ", a/b);
 
 // Assignment Operators
 var c = b;
-// c += 2;
-// c -= 2; // c = c - 2;
-// c *= 2;
-// c /= 2;
-// console.log(c);
+c += 2; // c = c + 2;
+c -= 2; // c = c - 2;
+c *= 2; // c = c * 2;
+c /= 2; // c = c / 2;
+
 
 // Comparison Operators
 var x = 34;
 var y = 56;
-// console.log(x == y);
-// console.log(x >= y);
-// console.log(x <= y);
-// console.log(x > y);
-// console.log(x < y);
+console.log(x == y);
+console.log(x >= y);
+console.log(x <= y);
+console.log(x > y);
+console.log(x < y);
 
 // Logical Operators
-
 // Logical and
-// console.log(true && true)
-// console.log(true && false)
-// console.log(false && true)
-// console.log(false && false)
+console.log(true && true)
+console.log(true && false)
+console.log(false && true)
+console.log(false && false)
+
+//--------------------------------------------//
 
 // Logical or
-// console.log(true || true)
-// console.log(true || false)
-// console.log(false || true)
-// console.log(false || false)
+console.log(true || true)
+console.log(true || false)
+console.log(false || true)
+console.log(false || false)
+
+//--------------------------------------------//
 
 // Logical not
-// console.log(!false);
-// console.log(!true);
+console.log(!false);
+console.log(!true);
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Function in JavaScript
 function avg(a, b) {
@@ -112,23 +136,37 @@ c1 = avg(4, 6);
 c2 = avg(14, 16);
 // console.log(c1, c2);
 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // Conditionals in JavaScript
-/*
+
 var age = 41;
+
 // Single if statement
+
 if(age > 18){
     console.log('You can drink rasna water');
 }
+
+//---------------------------------------------------------------// 
+
 // if - else statement
-// if(age > 18){
-//     console.log('You can drink rasna water');
-// }
-// else{
-//     console.log('You cannot drink rasna water');
-// }
+
+
+if(age > 18){
+    console.log('You can drink rasna water');
+}
+else{
+    console.log('You cannot drink rasna water');
+}
+
+//---------------------------------------------------------------//
 
 age = 25;
+
 // if-else Ladder
+
 if(age > 32){
     console.log("You are not a kid");
 }
@@ -145,34 +183,39 @@ else{
     console.log("Bachhe rahe");
 }
 console.log("End of ladder");
-*/
+
+//----------------------------------------------------------------//
+
 
 var arr = [1, 2, 3, 4, 5, 6, 7];
-// console.log(arr);
-// for(var i=0;i<arr.length;i++){
-//     if(i==2){
-//         // break;
-//         continue;
-//     }
-//     console.log(arr[i])
-// }
+console.log(arr);
+for(var i=0;i<arr.length;i++){
+    if(i==2){
+        // break;
+        continue;
+    }
+    console.log(arr[i])
+}
 
-// arr.forEach(function(element){
-//     console.log(element);
-// })
-// const ac = 0;
-// ac++;
-// ac = ac +1;
-// let j = 0;
-// while(j<arr.length){
-//     console.log(arr[j]);
-//     j ++;
-// }
+//---------------------------------------------------------------//
 
-// do{
-//     console.log(arr[j]);
-//     j++;
-// } while (j < arr.length);
+
+arr.forEach(function(element){
+    console.log(element);
+})
+const ac = 0;
+ac++;
+ac = ac +1;
+let j = 0;
+while(j<arr.length){
+    console.log(arr[j]);
+    j ++;
+}
+
+do{
+    console.log(arr[j]);
+    j++;
+} while (j < arr.length);
 
 let myArr = ["Fan", "Camera", 34, null, true];
 // Array Methods
