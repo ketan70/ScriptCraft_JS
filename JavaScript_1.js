@@ -278,21 +278,33 @@ console.log(myDate.getHours());
 
 //--- IMP-------- DOM Manipulation ( Document Object model )-------IMP---//
 
+//-------------------getElementById------------------------//
+
 let elem = document.getElementById('click');
 // console.log(elem);
 
+//-------------------getElementByClassName------------------//
+
+
 let elemClass = document.getElementsByClassName("container")
+
 // console.log(elemClass);
-// elemClass[0].style.background = "yellow";
+
+elemClass[0].style.background = "yellow";
 elemClass[0].classList.add("bg-primary")
 elemClass[0].classList.add("text-success")
-// console.log(elem.innerHTML);
-// console.log(elem.innerText); 
+
+console.log(elem.innerHTML);
+console.log(elem.innerText); 
 
 // console.log(elemClass[0].innerHTML);
 // console.log(elemClass[0].innerText); 
+
+//--------------------getElementByTagName------------------//
+
 tn = document.getElementsByTagName('div')
 // console.log(tn)
+
 createdElement = document.createElement('p');
 createdElement.innerText = "This is a created para";
 tn[0].appendChild(createdElement);
@@ -301,50 +313,77 @@ createdElement2.innerText = "This is a created bold";
 tn[0].replaceChild(createdElement2, createdElement);
 // removeChild(element); ---> removes an element
  
-// Selecting using Query
-// sel = document.querySelector('.container')
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//------------------ Selecting using Query----------------//
+
+sel = document.querySelector('.container')
 // console.log(sel)
-// sel = document.querySelectorAll('.container')
+sel = document.querySelectorAll('.container')
 // console.log(sel)
 
-// function clicked(){
-//     console.log('The button was clicked')
-// }
-// window.onload = function(){
-//     console.log('The document was loaded')
+//----------------- function clicked()-------------------//
 
-// }
+// <button onclick = clicked() >button</button>
+
+function clicked(){
+    console.log('The button was clicked')
+}
+
+// execute at the time of relode()
+
+window.onload = function(){
+    console.log('The document was loaded')
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // Events in JavaScript
-// firstContainer.addEventListener('click', function(){
-//     document.querySelectorAll('.container')[1].innerHTML = "<b> We have clicked</b>"
-//     console.log("Clicked on Container")
-// })
 
-// firstContainer.addEventListener('mouseover', function(){
-//     console.log("Mouse on Container")
-// })
-
-// firstContainer.addEventListener('mouseout', function(){
-//     console.log("Mouse out of Container");
-// })
-
-// let prevHTML = document.querySelectorAll('.container')[1].innerHTML;
-// firstContainer.addEventListener('mouseup', function(){
-//     document.querySelectorAll('.container')[1].innerHTML = prevHTML;
-//     console.log("Mouse up when clicked on Container");
-// })
-
-// firstContainer.addEventListener('mousedown', function(){
-//     document.querySelectorAll('.container')[1].innerHTML = "<b> We have clicked</b>"
-//     console.log("Mouse down when clicked on Container");
-// })
+firstContainer.addEventListener
+(   'click',
+    function()
+    {
+        document.querySelectorAll('.container')[1].innerHTML = "<b> We have clicked</b>"
+        console.log("Clicked on Container")
+    }
+)
 
 
-// Arrow Functions
-// function summ(a, b){
-//     return a+b;
-// }
-summ = (a,b)=>{
+firstContainer.addEventListener
+(
+    'mouseover', 
+    function()
+    { console.log("Mouse on Container")
+    }
+)
+
+firstContainer.addEventListener('mouseout', function(){ console.log("Mouse out of Container");})
+
+let prevHTML = document.querySelectorAll('.container')[1].innerHTML;
+firstContainer.addEventListener('mouseup', function(){
+    document.querySelectorAll('.container')[1].innerHTML = prevHTML;
+    console.log("Mouse up when clicked on Container");
+})
+
+firstContainer.addEventListener('mousedown', function(){
+    document.querySelectorAll('.container')[1].innerHTML = "<b> We have clicked</b>"
+    console.log("Mouse down when clicked on Container");
+})
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//-----------------------Arrow Functions---------------------//
+
+function summ(a, b){
+    return a+b;
+}
+
+summ = (a,b) => {
     return a+b;
 }
 
@@ -352,25 +391,36 @@ logKaro = ()=>{
     document.querySelectorAll('.container')[1].innerHTML = "<b> Set interval fired</b>"
     console.log("I am your log")
 }
-// SetTimeout and setinterval
-// clr = setTimeout(logKaro, 5000);
-// clr = setInterval(logKaro, 2000);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//------------------------ SetTimeout and setinterval--------------------------//
+
+clr = setTimeout(logKaro, 5000); /// 5000 -> time we need to skip , logKaro -> is fuction that we need to call after time
+clr2 = setInterval(logKaro, 2000); /// set execute after every 2000 ms;
+// To stop the above life-time execution after 2000 ms
+clearTimeout(clr2)
+
 // use clearInterval(clr)/clearTimeout(clr) to cancel setInterval/setTimeout
 
-// JavaScript localStorage
-// localStorage.setItem('name', 'harry') 
-// localStorage 
-// localStorage.getItem('name')
-// localStorage.removeItem('name')
-// localStorage.clear();
 
-// Json 
-// obj = {name: "harry", length: 1, a: {this: 'tha"t'}}
-// jso = JSON.stringify(obj);
-// console.log(typeof jso)
-// console.log(jso)
-// parsed = JSON.parse(`{"name":"harry","length":1,"a":{"this":"that"}}`)
-// console.log(parsed);
+// ----------------------- JavaScript localStorage ----------------------------//
+
+localStorage.setItem('name','harry') 
+localStorage // show the local storage { name : "harry", length:1}
+
+localStorage.getItem('name') // get iteam from storage
+localStorage.removeItem('name') // remove iteam from storage
+localStorage.clear(); // clear the all element from storage
+
+// ------------------------------- Json------------------------------------// 
+
+obj = {name: "harry", length: 1, a: {this: 'tha"t'}}
+jso = JSON.stringify(obj);
+console.log(typeof jso) // ->
+console.log(jso) // -> 
+parsed = JSON.parse(`{"name":"harry","length":1,"a":{"this":"that"}}`)
+console.log(parsed);
 
 // Template literals - Backticks
 a = 34;
