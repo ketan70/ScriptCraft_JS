@@ -54,7 +54,7 @@ var n = null;
 // console.log(n);
 
 
-//-------------------------------------------------------------//
+//---------------------------------------------------//
 
 
 // 2. Reference data types: Arrays and Objects
@@ -149,7 +149,7 @@ if(age > 18){
     console.log('You can drink rasna water');
 }
 
-//---------------------------------------------------------------// 
+//----------------------------------------------------// 
 
 // if - else statement
 
@@ -161,7 +161,7 @@ else{
     console.log('You cannot drink rasna water');
 }
 
-//---------------------------------------------------------------//
+//----------------------------------------------------//
 
 age = 25;
 
@@ -184,8 +184,9 @@ else{
 }
 console.log("End of ladder");
 
-//----------------------------------------------------------------//
+//----------------------------------------------------//
 
+// Loop
 
 var arr = [1, 2, 3, 4, 5, 6, 7];
 console.log(arr);
@@ -199,53 +200,84 @@ for(var i=0;i<arr.length;i++){
 
 //---------------------------------------------------------------//
 
+// forEach
 
 arr.forEach(function(element){
     console.log(element);
 })
-const ac = 0;
-ac++;
-ac = ac +1;
+
+//--------------------------------------------------------------//
+
+// while loop
+
+// const ac = 0;
+// ac++;
+// ac = ac +1;
 let j = 0;
 while(j<arr.length){
     console.log(arr[j]);
     j ++;
 }
 
+// --------------------------------------------------------------//
+
+// Do while
+
 do{
     console.log(arr[j]);
     j++;
 } while (j < arr.length);
 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Array Methods in JavaScript
+
 let myArr = ["Fan", "Camera", 34, null, true];
 // Array Methods
-// console.log(myArr.length);
-// myArr.pop();
-// myArr.push("harry")
-// myArr.shift()
+console.log(myArr.length);
+myArr.pop();
+myArr.push("harry");
+myArr.shift();
+myArr.sort();
+myArr.toString();
 // const newLen = myArr.unshift("Harry")
 // console.log(newLen);
 // console.log(myArr);
 
-// String Methods in JavaScript
-let myLovelyString = "Harry is a good boy good good Harry";
-// console.log(myLovelyString.length)
-// console.log(myLovelyString.indexOf("good"))
-// console.log(myLovelyString.lastIndexOf("good"))
+///////////////////////////////////////////////////////////////////////////////////////////////////
 
-// console.log(myLovelyString.slice(1,4))
-d = myLovelyString.replace("Harry", "Rohan");
-// d = d.replace("good", "bad");
+// String Methods in JavaScript
+
+let myLovelyString = "Harry is a good boy good good Harry";
+
+console.log(myLovelyString.length) 
+console.log(myLovelyString.indexOf("good")) // --> 11
+console.log(myLovelyString.lastIndexOf("good")) // -> 29
+
+/--------------------------------------/
+
+console.log(myLovelyString.slice(1,4))   // -> arr
+d = myLovelyString.replace("Harry", "Rohan"); // raplace the element
+d = d.replace("good", "bad");
 // console.log(d, myLovelyString)
 
+///////////////////////////////////////////////////////////////////////////////////
+// Date Time
+// Assigning  the date info to variable
 let myDate = new Date();
-// console.log(myDate.getTime());
-// console.log(myDate.getFullYear());
-// console.log(myDate.getDay());
-// console.log(myDate.getMinutes());
-// console.log(myDate.getHours());
+
+// calling the time / year / day / Minutes / Hours
+console.log(myDate.getTime());
+console.log(myDate.getFullYear());
+console.log(myDate.getDay());
+console.log(myDate.getMinutes());
+console.log(myDate.getHours());
  
-// DOM Manipulation
+/////////////////////////////////////////////////////////////////////////////////////
+
+//--- IMP-------- DOM Manipulation ( Document Object model )-------IMP---//
+
 let elem = document.getElementById('click');
 // console.log(elem);
 
