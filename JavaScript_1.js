@@ -1,3 +1,8 @@
+// ECMAScript 
+// [1] is a JavaScript standard intended to ensure the interoperability of web pages across different browsers.
+// [2] It is standardized by Ecma International in the document ECMA-262.
+
+
 // 1. Ways to print in JavaScript
 console.log("Hello World");
 alert("me");
