@@ -422,6 +422,6 @@ console.log(jso) // ->
 parsed = JSON.parse(`{"name":"harry","length":1,"a":{"this":"that"}}`)
 console.log(parsed);
 
-// Template literals - Backticks
+// ------------------ Template literals - Backticks ----------------------//
 a = 34;
-console.log(`this is my ${a}`)
+console.log(`this is my ${a}`)   // -->> this is my 34
