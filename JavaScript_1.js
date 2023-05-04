@@ -325,8 +325,11 @@ tn[0].replaceChild(createdElement2, createdElement);
 
 sel = document.querySelector('.container')
 // console.log(sel)
-sel = document.querySelectorAll('.container')
-// console.log(sel)
+sel = document.querySelectorAll('.container') // -> class selector
+sel = document.querySelectorAll('#container') // (#container) // --> id selector
+sel = document.querySelectorAll('p')  // -> tag selector all value selected related to p tag
+sel = document.querySelector('container')  // -> first container class will be selected
+// console.log(sel) 
 
 //----------------- function clicked()-------------------//
 
@@ -421,7 +424,9 @@ localStorage.clear(); // clear the all element from storage
 // ------------------------------- Json------------------------------------// 
 
 obj = {name: "harry", length: 1, a: {this: 'tha"t'}}
+
 jso = JSON.stringify(obj);
+
 console.log(typeof jso) // ->
 console.log(jso) // -> 
 parsed = JSON.parse(`{"name":"harry","length":1,"a":{"this":"that"}}`)
@@ -429,4 +434,4 @@ console.log(parsed);
 
 // ------------------ Template literals - Backticks ----------------------//
 a = 34;
-console.log(`this is my ${a}`)   // -->> this is my 34
+console.log(`this is my ${a}`)    // -->> console.log("this is my" + a) // -->>  this is my 34
